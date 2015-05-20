@@ -1,0 +1,63 @@
+#!/bin/sh
+
+set -e
+
+echo "Upgrading system..."
+
+
+echo "\nPHP:"
+
+echo "\n- Composer (selfupdate)"
+composer selfupdate
+
+echo "\n- Composer (global update)"
+composer global update
+
+
+echo "\nCLI:"
+
+echo "\n- Brew (reset)"
+cd $(brew --repository) && git fetch && git checkout master && git reset --hard origin/master
+for file in /usr/local/Library/Taps/*/*/; do (cd $file && git fetch && git checkout master && git reset --hard origin/master); done
+
+echo "\n- Brew (update)"
+brew update
+
+echo "\n- Brew (upgrade)"
+brew upgrade --all
+
+echo "\n- Brew (cleanup)"
+brew cleanup -s --force
+
+
+echo "\nNode.js:"
+
+echo "\n- NPM (npm)"
+npm install -g npm@latest
+
+echo "\n- NPM (upgrade)"
+upgrade-npm
+
+echo "\n- NPM (postinstall)"
+brew postinstall node
+
+
+echo "\nRuby:"
+
+echo "\n- Ruby gems (update)"
+gem update
+
+echo "\n- Ruby gems (cleanup)"
+gem cleanup
+
+
+echo "\nPython:"
+
+upgrade-pip
+
+echo "\nApplications:"
+
+echo "\n- Cask (upgrade)"
+brew-cask-upgrade
+
+echo "\nDone!\n"
