@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Credit to c00kiemon5ter: https://gist.github.com/c00kiemon5ter/3730069b6c920841a3ca
+
 help=0
 latest=0
 verbose=0
