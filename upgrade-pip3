@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "\n- Pip3 (pip & setuptools)"
+pip3 install --upgrade pip setuptools

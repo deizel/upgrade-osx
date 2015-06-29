@@ -5,3 +5,5 @@ set -e
 echo "\nPython:"
 
 upgrade-pip
+
+upgrade-pip3

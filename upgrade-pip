@@ -9,6 +9,3 @@ pip install --upgrade --no-use-wheel setuptools
 echo "\n- Pip (outdated)"
 echo Skipped.
 #pip list --outdated --allow-external vboxapi | cut -d " " -f 1 | xargs pip install -U
-
-echo "\n- Pip3 (pip & setuptools)"
-pip3 install --upgrade pip setuptools
