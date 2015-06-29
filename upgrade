@@ -11,7 +11,7 @@ echo "\n- Composer (selfupdate)"
 composer selfupdate
 
 echo "\n- Composer (global update)"
-composer global update
+composer global update -v
 
 
 echo "\nCLI:"
