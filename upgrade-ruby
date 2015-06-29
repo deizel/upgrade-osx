@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+echo "\nRuby:"
+
+echo "\n- Ruby gems (update)"
+gem update
+
+echo "\n- Ruby gems (cleanup)"
+gem cleanup

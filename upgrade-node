@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+echo "\nNode.js:"
+
+echo "\n- NPM (npm)"
+npm install -g npm@latest
+
+echo "\n- NPM (upgrade)"
+upgrade-npm
+
+echo "\n- NPM (postinstall)"
+brew postinstall node

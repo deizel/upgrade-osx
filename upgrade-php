@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+echo "\nPHP:"
+
+echo "\n- Composer (selfupdate)"
+composer selfupdate
+
+echo "\n- Composer (global update)"
+composer global update -v

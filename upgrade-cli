@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+echo "\nCLI:"
+
+echo "\n- Brew (reset)"
+cd $(brew --repository) && git fetch && git checkout master && git reset --hard origin/master
+for file in /usr/local/Library/Taps/*/*/; do (cd $file && git fetch && git checkout master && git reset --hard origin/master); done
+
+echo "\n- Brew (update)"
+brew update
+
+echo "\n- Brew (upgrade)"
+brew upgrade --all
+
+echo "\n- Brew (cleanup)"
+brew cleanup -s --force
