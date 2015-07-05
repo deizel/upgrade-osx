@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+echo "\n- Pip2 (pip)"
+pip install --upgrade --no-use-wheel pip
+
+echo "\n- Pip2 (setuptools)"
+pip install --upgrade --no-use-wheel setuptools
+
+echo "\n- Pip2 (outdated)"
+echo Skipped.
+#pip list --outdated --allow-external vboxapi | cut -d " " -f 1 | xargs pip install -U
