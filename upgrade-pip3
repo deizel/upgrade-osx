@@ -2,3 +2,7 @@
 
 echo "\n- Pip3 (pip & setuptools)"
 pip3 install --upgrade pip setuptools
+
+# https://github.com/Homebrew/homebrew/issues/25752#issuecomment-105010149
+echo "\n- Pip3 (replace pip with pip2)"
+pip2 install --upgrade --force-reinstall pip
