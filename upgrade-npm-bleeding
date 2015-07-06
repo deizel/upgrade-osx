@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+# Credit to othiym23: https://gist.github.com/othiym23/4ac31155da23962afd0e
+
 set -e
 set -x
 
