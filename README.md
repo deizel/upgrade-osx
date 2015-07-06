@@ -12,14 +12,14 @@ Scripts
 
   - `upgrade-php` - Upgrades Composer packages using `composer`
 
-  - `upgrade-cli` - Upgrades Homebrew packages using `brew`.
+  - `upgrade-cli` - Upgrades Homebrew binaries using `brew`.
 
-  - `upgrade-node` - Upgrades Node packages using `npm`.
+  - `upgrade-node` - Upgrades Node modules using `npm`.
 
-  - `upgrade-ruby` - Upgrades Ruby packages using `gem`.
+  - `upgrade-ruby` - Upgrades Ruby gems using `gem`.
 
   - `upgrade-python` - Upgrade Python2/3 packages using `pip`.
 
-  - `upgrade-applications` - Upgrades Homebrew packages using `brew cask`.
+  - `upgrade-applications` - Upgrades Homebrew Cask applications using `brew cask`.
 
 [anchorman]: https://www.youtube.com/watch?v=pjvQFtlNQ-M
