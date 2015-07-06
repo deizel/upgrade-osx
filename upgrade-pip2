@@ -6,6 +6,6 @@ pip install --upgrade --no-use-wheel pip
 echo "\n- Pip2 (setuptools)"
 pip install --upgrade --no-use-wheel setuptools
 
-echo "\n- Pip2 (outdated)"
-echo Skipped.
-#pip list --outdated --allow-external vboxapi | cut -d " " -f 1 | xargs pip install -U
+# http://stackoverflow.com/questions/2720014/upgrading-all-packages-with-pip
+echo "\n- Pip2 (upgrade all)"
+pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip2 install -U

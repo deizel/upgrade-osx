@@ -6,3 +6,7 @@ pip3 install --upgrade pip setuptools
 # https://github.com/Homebrew/homebrew/issues/25752#issuecomment-105010149
 echo "\n- Pip3 (replace pip with pip2)"
 pip2 install --upgrade --force-reinstall pip
+
+# http://stackoverflow.com/questions/2720014/upgrading-all-packages-with-pip
+echo "\n- Pip3 (upgrade all)"
+pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
