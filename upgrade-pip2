@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
 echo "\n- Pip2 (pip)"
-pip install --upgrade --no-use-wheel pip
+pip2 install --upgrade --no-use-wheel pip
 
 echo "\n- Pip2 (setuptools)"
-pip install --upgrade --no-use-wheel setuptools
+pip2 install --upgrade --no-use-wheel setuptools
 
 # http://stackoverflow.com/questions/2720014/upgrading-all-packages-with-pip
 echo "\n- Pip2 (upgrade all)"
